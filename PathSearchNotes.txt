@@ -1,0 +1,15 @@
+One thing that I am not sure about is what we want to do.
+
+Do we:
+
+::Use all three robots to search for the blocks and then use memory to pick them up once all blocks have been located?
+
+::Use a rudimentary search and return algorithm? (this one intuitively seems like the slowest)
+
+::Have one robot searching and informing the others that more blocks exist?
+
+::First research a little more and THEN try to come up with some more reasonable ideas.
+
+::For now stick with what we know? That is just wasting resources AND time... I will look into the most basic part right now though. What it does when it finds a block :x
+
+I seriously hope they don't get mad. I really think they are just trying to rush and I hope we don't waste time doing something that is unnecessary or literally useless for the competition...
