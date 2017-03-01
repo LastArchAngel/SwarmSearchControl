@@ -28,3 +28,5 @@ A* Algorithm: (Intro)
 http://theory.stanford.edu/~amitp/GameProgramming/AStarComparison.html
 Pretty good basic algorithm, and kind of how to implement it :)
 
+---------------- * TO - DO LIST: * ------------------------
+* Today and tomorrow (Mar 1-2), write down notes that explain how the mobility file works, is connected to the search module and how we can change BOTH of these to get desired results.

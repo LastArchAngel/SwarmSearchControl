@@ -1,0 +1,19 @@
+// Initially this code uses random numbers to make its movements.
+We want to be able to change this and optimize it to make sure that we get better results.
+
+All three modules: PickUp, DropOff, and Search are all used within mobility. So, we need to mostly work on search and then all of that will be implemented in mobility.cpp
+
+Note that this is NOT Object Oriented Design. Since almost nothing belongs to classes and a lot of the functions are just declared.
+
+/src/mobility/src/mobility.cpp
+(line 180)
+Each robot has its own center location set at 0,0. We can try to change this so that each robot will be able to know more or less where it is at in respect to each other...
+
+(line 243)
+This is the StateMachine that tells the robot how to behave and when to search. The search algorithm is defined in the search controller but this will tell the rover when to search.
+
+(line 487)
+This is the DropOff state... it is left empty... so we need to work on that.
+
+(line 623)
+ObstacleHandler code, this is what makes the robot get away from obstacles.
