@@ -12,4 +12,9 @@ Do we:
 
 ::For now stick with what we know? That is just wasting resources AND time... I will look into the most basic part right now though. What it does when it finds a block :x
 
-I seriously hope they don't get mad. I really think they are just trying to rush and I hope we don't waste time doing something that is unnecessary or literally useless for the competition...
+********* NOTES *********
+
+Two functions:
+	search
+	continueInterruptedSearch
+
