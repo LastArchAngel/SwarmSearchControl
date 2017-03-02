@@ -17,3 +17,20 @@ This is the DropOff state... it is left empty... so we need to work on that.
 
 (line 623)
 ObstacleHandler code, this is what makes the robot get away from obstacles.
+
+
+Variables: what they store, and how they are used.
+
+currentLocation: This is the robot's current location.
+	* What is the definition?
+	* Where is the definition of Pose2D, goalLocation is an instatiation of this object.
+
+goalLocation: This is the location that we want to get to.
+	* What is the definition?
+	
+	
+Functions that are useful:
+	/src/mobility/src/mobility.cpp	  (line 511)
+	* sendDriveCommand(linearVel, angularError);
+	- This drives and turns the robot simultaneously.
+	- There is nuance to this. The robot will slowly move forward and turn to try to keep its heading. There will be a certain error in this and we need to find out how to fix this.

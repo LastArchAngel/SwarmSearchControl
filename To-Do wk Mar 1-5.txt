@@ -1,0 +1,20 @@
+Things that we definitely need to fix:
+(No particular order or level of difficulty)
+* Drop off state for the state machine is empty. We really need to work on this.
+* SearchController module that holds the algorithm is bare bones and only searches in a random pattern.
+* Turning speed of robot in search is too fast and won't detect the block.
+* GPS is intentionally buggy, we can either fix this or try to use another method: the odom frame.
+* Robot detection of the goal is intentionally buggy and will not detect the drop off location accurately. This is really important.
+
+Where to look and possible fixes:
+* Drop off state:
+  /src/mobility/src/mobility.cpp	(line 487)
+  We need find a path back to the center. One that doesn't run into blocks. And then be able to drop off the controller precisely without pushing blocks out of the drop off zone.
+
+* SearchController module:
+  /src/mobility/src/SearchController.cpp
+  Right now the algorithm turns a random angle, and moves forwared in a random location.
+  We need to implement a basic algorithm that searches. Maybe turn slowly, 360 degrees(2 Pi) and if no AprilTag is found, move forward. We can research and program a better algorithm as we keep moving forward.
+
+* Robot Goal Detection is not very accurate:
+  
