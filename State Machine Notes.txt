@@ -1,0 +1,8 @@
+We have 5 states:
+* Transform
+* Rotate
+* Skid_Steer
+* Pickup
+* Dropoff
+
+The dropoff case is completely empty. We need to look at how to control the robot and how to efficiently and quickly return to the center.
