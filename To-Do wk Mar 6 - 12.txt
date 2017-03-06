@@ -1,0 +1,11 @@
+To - Do list
+: Find how the rover moves - what functions are called, and what they actually do.
+: Find out how the state machine works "fully".
+: Find how the rotation speed is changed.
+: Find out how to change the rotation speed only in the searchController. This is so that we don't slow down the rover completely.
+
+Once we know how the rover is "controlled"(what functions are called), then we will be able to call the functions ourselves, and see how we can program the movement.
+
+Turn - look, turn -look... we can try to implement a different search algorithm... so, don't randomly look in a direction.
+
+Look at the GPS and how we can "cancel" the GPS.

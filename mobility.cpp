@@ -511,7 +511,7 @@ void mobilityStateMachine(const ros::TimerEvent&) {
 void sendDriveCommand(double linearVel, double angularError)
 {
     velocity.linear.x = linearVel,
-    velocity.angular.z = angularError;
+    velocity.angular.z = angularError;	// edited by Vinh - times .5 to make it slower
 
     // publish the drive commands
     driveControlPublish.publish(velocity);
