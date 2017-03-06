@@ -5,4 +5,27 @@ We have 5 states:
 * Pickup
 * Dropoff
 
+Fall through:
+	* Transform falls through to rotate.
+	* Rotate falls through to Skid_Steer.
+  This is done to make the code faster. Once the goal location is set, then rotate, once the heading is minimized, start moving to the goal location.
+
+***** Transform *****
+  This state is the "default" state. It initializes the movement and location. It is the initial state and moves on to the Rotate or Skid_Steer states.
+  
+******* Rotate ******
+  This state is used when the current location and goal location  have a difference of .4 radians. It turns the rover but doesn't move forward. It will stay in this state until the angle is minimized. This is just the theta.
+
+***** Skid_Steer ****
+  
+
+******* Pickup ******
+  
+
+****** Dropoff ******
+  
+
+
 The dropoff case is completely empty. We need to look at how to control the robot and how to efficiently and quickly return to the center.
+
+The state machine initially checks its current location, it uses the map frame and odom frame. 

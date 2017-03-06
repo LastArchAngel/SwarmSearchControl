@@ -1,0 +1,5 @@
+What we need to do is find out how the movement is done by the robot and also look at how we can program the movement.
+
+Location:
+	We are working on a 2 dimensional plane: (x, y)
+	We also work with a theta. This is the angle that the robot is turned.
