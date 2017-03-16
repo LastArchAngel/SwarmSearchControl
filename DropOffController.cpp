@@ -35,14 +35,15 @@ DropOffController::DropOffController() {
 }
 
 
-
+// DropOffController is what actually drops the block
 void DropOffController::calculateDecision() {
 
     result.goalDriving = true; //assumewe are driving to the center unless we see targets or have seen targets.
     result.timer = false;
 
 
-    //if we are in the routine for exciting the circle once we have droppeda block off and reseting all our flags
+// If we have dropped it off at the center and are leaving the goal.
+    //if we are in the routine for exiting the circle once we have dropped a block off and reseting all our flags
     //to resart our search.
     if(reachedCollectionPoint)
     {

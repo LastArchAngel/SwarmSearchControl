@@ -327,7 +327,8 @@ void mobilityStateMachine(const ros::TimerEvent&) {
                     angle.data = result.wristAngle;
                     wristAnglePublish.publish(angle);
                 }
-
+				
+				// if the rover runs into some trouble, and doesn't know what to do anymore, just reset the rover.
                 if (result.reset) {
                     timerStartTime = time(0);
                     targetCollected = false;
@@ -335,20 +336,27 @@ void mobilityStateMachine(const ros::TimerEvent&) {
                     lockTarget = false;
                     sendDriveCommand(0.0,0);
 
-                    // move back to transform step
+                    // Stop the rover, reset the state: move back to transform step
                     stateMachineState = STATE_MACHINE_TRANSFORM;
                     reachedCollectionPoint = false;;
                     centerLocationOdom = currentLocation;
 
-                    dropOffController.reset();
-                } else if (result.goalDriving && timerTimeElapsed >= 5 ) {
+                    // What does this do?
+					// It just resets the dropOffController.
+					// The dropOffController is a struct that has all of the variables needed to make sure that the rover is dropping off the block correctly. It needs to be reset everytime that we intend to use it :) How is the dropoff controller used?
+					dropOffController.reset();
+                }
+				//
+				else if (result.goalDriving && timerTimeElapsed >= 5 ) {
                     goalLocation = result.centerGoal;
                     stateMachineState = STATE_MACHINE_ROTATE;
                     timerStartTime = time(0);
                 }
-                // we are in precision/timed driving
+                
+				// we are in precision/timed driving - what does this even mean? xD
+				// I think this means that it slowly turns the rover?
                 else {
-                    goalLocation = currentLocation;
+                    goalLocation = currentLocation;		// why? :x
                     sendDriveCommand(result.cmdVel,result.angleError);
                     stateMachineState = STATE_MACHINE_TRANSFORM;
 
