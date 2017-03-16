@@ -17,7 +17,7 @@ geometry_msgs::Pose2D SearchController::search(geometry_msgs::Pose2D currentLoca
   geometry_msgs::Pose2D goalLocation;
 
   //select new heading from Gaussian distribution around current heading
-  goalLocation.theta = rng->gaussian(currentLocation.theta, 0.25);
+  goalLocation.theta = rng->gaussian(currentLocation.theta, 0.25);  // where is the gaussian function located?
 
   //select new position 50 cm from current location
   goalLocation.x = currentLocation.x + (0.5 * cos(goalLocation.theta));
